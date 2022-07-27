@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('height')->nullable();
             $table->string('company')->nullable();
             $table->string('address')->nullable();
+            $table->string('zipcode')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

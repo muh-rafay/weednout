@@ -31,7 +31,8 @@ class User extends Authenticatable
         'weight',
         'height',
         'comapny',
-        'address'
+        'address',
+        'zipcode'
     ];
 
     /**
