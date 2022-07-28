@@ -1,7 +1,18 @@
 <x-guest-layout>
     <div class="page-header align-items-start min-vh-100" style="background-image: url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');">
         <span class="mask bg-gradient-dark opacity-6"></span>
+
         <div class="container my-auto">
+            @if($errors->any())
+            <div class="alert alert-danger">
+                <p><strong>Opps Something went wrong</strong></p>
+                <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+                </ul>
+            </div>
+        @endif
           <div class="row">
             <div class="col-lg-4 col-md-8 col-12 mx-auto">
               <div class="card z-index-0 fadeIn3 fadeInBottom">
@@ -14,6 +25,7 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="card-body">
                    <form method="POST" action="{{ route('login') }}">
                       @csrf

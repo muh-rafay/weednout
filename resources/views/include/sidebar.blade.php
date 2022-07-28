@@ -16,11 +16,28 @@
           </a>
           <div class="collapse" id="ProfileNav" >
             <ul class="nav ">
-              <li class="nav-item">
-                <a class="nav-link text-white" href="../../pages/dashboards/Profile.html">
-                  <span class="sidenav-normal  ms-3  ps-1"  style="color: #087807;font-weight: bold;"> My Profile </span>
-                </a>
-              </li>
+            @if(Auth::user()->hasrole('admin'))
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ route('profiles.index') }}">
+                    <span class="sidenav-normal  ms-3  ps-1"  style="color: #087807;font-weight: bold;"> My Profile </span>
+                    </a>
+                </li>
+            @endif
+            @if(Auth::user()->hasrole('dispenser'))
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ route('dispenser_profiles.index') }}">
+                    <span class="sidenav-normal  ms-3  ps-1"  style="color: #087807;font-weight: bold;"> My Profile </span>
+                    </a>
+                </li>
+            @endif
+            @if(Auth::user()->hasrole('client'))
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ route('client_profiles.index') }}">
+                    <span class="sidenav-normal  ms-3  ps-1"  style="color: #087807;font-weight: bold;"> My Profile </span>
+                    </a>
+                </li>
+            @endif
+
               <li class="nav-item">
                 <div class="offset-2">
                     <form method="POST" action="{{ route('logout') }}">
@@ -212,13 +229,13 @@
                 </a>
             </li>
             <li class="nav-item " id="navlink">
-                <a class="nav-link text-success " href="{{ route('assesments.index') }}">
+                <a class="nav-link text-success " href="">
                   <i class="fa fa-search" style="font-size: 1rem;color:#087807 ;font-weight: bold;" ></i>
                   <span class="sidenav-normal  ms-2  ps-1"  style="color: #087807;font-weight: bold;"> Assesments  </span>
                 </a>
             </li>
             <li class="nav-item  " id="navlink">
-                <a class="nav-link text-success  " href="{{ route('products.index') }}">
+                <a class="nav-link text-success  " href="{{ route('histories.index') }}">
                   <svg  style="width:1rem; height:1rem;font-weight: bolder; " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 502 502" style="enable-background:new 0 0 502 502;" xml:space="preserve">
                     <g>
                       <g>
@@ -263,7 +280,7 @@
                 </a>
               </li>
               <li class="nav-item  " id="navlink">
-                <a class="nav-link text-success  " href="{{ route('products.index') }}">
+                <a class="nav-link text-success  " href="{{ route('client_products.index') }}">
                   <svg  style="width:1rem; height:1rem;font-weight: bolder; " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 502 502" style="enable-background:new 0 0 502 502;" xml:space="preserve">
                     <g>
                       <g>
@@ -306,7 +323,7 @@
                     </svg>
                   <span class="sidenav-normal  ms-2  ps-1"  style="color: #087807;font-weight: bold;"> Product </span>
                 </a>
-              </li>
+                </li>
             @endif
             </ul>
           </div>
@@ -315,3 +332,6 @@
       </ul>
     </div>
   </aside>
+
+
+

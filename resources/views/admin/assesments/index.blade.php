@@ -15,17 +15,15 @@
               <div class="row mx-5 py-4">
                <form action="{{ route("assesments.store") }}" method="post">
                 @csrf
-                  <div class="col-12 d-flex py-3">
-
-                          <div class="col-2 "><p>Question</p></div>
+                  {{-- <div class="col-12 d-flex py-3">
+                        <div class="col-2 "><p>Question</p></div>
                           <select class="form-control" name="question_id" id="choices-category-edit">
+                            @foreach ($questions as $question)
+                            <option value="{{ $question->id }}" selected >{{  }}</option>
+                            @endforeach
                             <option value="1" selected >How do you want to feel today</option>
-                            <option value="2" >How do you want to feel yesterday</option>
-
                           </select>
-
-                        </div>
-
+                        </div> --}}
                         <div class="col-12 d-flex py-3">
                               <div class="col-2  "><p>Type</p></div>
                               <select class="form-control" name="type" id="choices-category-edit">

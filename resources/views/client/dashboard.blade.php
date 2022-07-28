@@ -1,4 +1,4 @@
-@extends('layouts.dispenser')
+@extends('layouts.client')
 @section('content')
 <div class="container-fluid ">
     <nav>

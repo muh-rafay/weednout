@@ -1,13 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\client;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Assesment;
-use App\Models\Question;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Str;
+use Illuminate\Validation\Rules;
 
-class AssementsController extends Controller
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +21,9 @@ class AssementsController extends Controller
      */
     public function index()
     {
-        $questions = Question::get();
-        return view('admin.assesments.index',compact('questions'));
+        $id = Auth::user()->id;
+        $user = User::where('id',$id)->first();
+        return view('client.profile.index',compact('user'));
     }
 
     /**
@@ -38,24 +44,7 @@ class AssementsController extends Controller
      */
     public function store(Request $request)
     {
-
-        foreach ($request->addMoreInputFields as $key => $value)
-        {
-            $image = null;
-            if($request->file($value['image']))
-            {
-                $file= $request->file($value['image']);
-                $filename= $file->getClientOriginalName();
-                $image =  $file-> move(public_path('public/Image'), $filename);
-            }
-            Assesment::create([
-                'type' => $request->type,
-                'user_id' => auth()->user()->id,
-                'title' => $value['title'],
-                'image' => $image,
-            ]);
-            return redirect()->route('assesments.index')->with('success',"Assesment Added");
-        }
+        //
     }
 
     /**
@@ -101,5 +90,19 @@ class AssementsController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function password_reset(Request $request){
+
+        $request->validate([
+            'token' =>['required'],
+            'email' => ['required', 'email'],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ]);
+        User::where('id',auth()->user()->id)->update([
+            'password' => Hash::make($request->password)
+        ]);
+        return redirect()->back();
+
+
     }
 }

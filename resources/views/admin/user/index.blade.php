@@ -78,7 +78,7 @@
                             </thead>
                             <tbody>
                             @foreach ($users as $user)
-                            @if($ user()->role = "client")
+                            @if(auth()->user()->role = "client")
                             <tr>
                                 <td class="text-sm font-weight-normal">##0&nbsp{{ $user->id }}</td>
                                 <td class="text-sm font-weight-normal">{{ $user->name }}</td>

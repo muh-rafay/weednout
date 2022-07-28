@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->string('price')->nullable();
             $table->string('location')->nullable();
+            $table->string('zipcode')->nullable();
             $table->string('created_by')->nullable();
             $table->timestamps();
         });

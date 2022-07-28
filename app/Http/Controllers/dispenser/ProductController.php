@@ -39,10 +39,11 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $image = null;
-        if($request->file('image')){
-            $file= $request->file('image');
-            $filename= $file->getClientOriginalName();
-            $image =  $file-> move(public_path('public/Image'), $filename);
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/';
+            $profileImage =  $request->image;
+           $image =  $image->move($destinationPath, $profileImage);
+
         }
         Product::create([
             'name'          => $request->name,
@@ -92,10 +93,11 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $image = null;
-        if($request->file('image')){
-            $file     = $request->file('image');
-            $filename = $file->getClientOriginalName();
-            $image    =  $file-> move(public_path('public/Image'), $filename);
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/';
+            $profileImage =  $request->image;
+           $image =  $image->move($destinationPath, $profileImage);
+
         }
         else{
             $im    = Product::where('id',$id)->first();

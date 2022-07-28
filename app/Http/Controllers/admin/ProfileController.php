@@ -4,10 +4,9 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Assesment;
-use App\Models\Question;
-
-class AssementsController extends Controller
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,9 @@ class AssementsController extends Controller
      */
     public function index()
     {
-        $questions = Question::get();
-        return view('admin.assesments.index',compact('questions'));
+        $id = Auth::user()->id;
+        $user = User::where('id',$id)->first();
+        return view('admin.profile.index',compact('user'));
     }
 
     /**
@@ -38,24 +38,7 @@ class AssementsController extends Controller
      */
     public function store(Request $request)
     {
-
-        foreach ($request->addMoreInputFields as $key => $value)
-        {
-            $image = null;
-            if($request->file($value['image']))
-            {
-                $file= $request->file($value['image']);
-                $filename= $file->getClientOriginalName();
-                $image =  $file-> move(public_path('public/Image'), $filename);
-            }
-            Assesment::create([
-                'type' => $request->type,
-                'user_id' => auth()->user()->id,
-                'title' => $value['title'],
-                'image' => $image,
-            ]);
-            return redirect()->route('assesments.index')->with('success',"Assesment Added");
-        }
+        //
     }
 
     /**

@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\client;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Assesment;
-use App\Models\Question;
+use App\Models\Product;
 
-class AssementsController extends Controller
+class HistoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,7 @@ class AssementsController extends Controller
      */
     public function index()
     {
-        $questions = Question::get();
-        return view('admin.assesments.index',compact('questions'));
+        return view('client.history.index');
     }
 
     /**
@@ -38,24 +36,7 @@ class AssementsController extends Controller
      */
     public function store(Request $request)
     {
-
-        foreach ($request->addMoreInputFields as $key => $value)
-        {
-            $image = null;
-            if($request->file($value['image']))
-            {
-                $file= $request->file($value['image']);
-                $filename= $file->getClientOriginalName();
-                $image =  $file-> move(public_path('public/Image'), $filename);
-            }
-            Assesment::create([
-                'type' => $request->type,
-                'user_id' => auth()->user()->id,
-                'title' => $value['title'],
-                'image' => $image,
-            ]);
-            return redirect()->route('assesments.index')->with('success',"Assesment Added");
-        }
+        //
     }
 
     /**

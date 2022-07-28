@@ -18,11 +18,8 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->string('type')->nullable();
             $table->string('image')->nullable();
-            $table->unsignedBigInteger('question_id');
-            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-
             $table->timestamps();
         });
     }
