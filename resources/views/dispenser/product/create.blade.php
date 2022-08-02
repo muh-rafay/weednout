@@ -56,8 +56,8 @@
                             </div>
                             <div class="col-md-6">
                             <div class="input-group input-group-outline my-3">
-                                <label class="form-label">Link</label>
-                                <input type="email" class="form-control">
+                                <label class="form-label">Zip Code</label>
+                                <input type="text" name="zipcode" class="form-control">
                             </div>
                             </div>
                         </div>

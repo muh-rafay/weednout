@@ -27,13 +27,13 @@
 
               <div class="col-12 my-2 d-flex">
                   <div class="col-2   pt-3"><p>Terpene Name</p></div>
-                  <div class="col-md-10">
-                    <select class="form-control" name="terpeneName" id="choices-category-edit">
-                      <option value="English" selected >Camphane</option>
-                      <option value="French" >Camphane</option>
-                      <option value="French" >Camphane</option>
-                      <option value="French" >Camphane</option>
-                    </select>
+                    <div class="col-md-10">
+                        <select class="form-control" name="terpeneName" id="choices-category-edit">
+                        <option value="English" selected >Camphane</option>
+                        <option value="French" >Camphane</option>
+                        <option value="French" >Camphane</option>
+                        <option value="French" >Camphane</option>
+                        </select>
                     </div>
               </div>
 
@@ -52,9 +52,14 @@
               <div class="col-12 d-flex">
                 <div class="col-2   pt-3"><p>Effects</p></div>
                 <div class="col-md-10">
-                    <div class="input-group input-group-outline  my-2">
-
-                      <input  type="text" name="effect" class="form-control" aria-label="text">
+                    <div class="input-group input-group-outline">
+                        <div class="col-md-12">
+                            <select class="form-control" name="effect" id="choices-category-edit">
+                                @foreach ($assesments as $assesment)
+                                <option value="{{ $assesment->title }}">{{ $assesment->title }}</option>
+                            @endforeach
+                            </select>
+                        </div>
                     </div>
                   </div>
             </div>

@@ -6,12 +6,13 @@
             </ol>
         </nav>
     </div>
-    @if(session()->has('success'))
-    <div class="alert alert-success">
-        {{ session()->get('message') }}
+    <div class="col-md-2 mr-4">
+        @if(session()->has('success'))
+        <div class="alert alert-success">
+            {{ session()->get('success') }}
+        </div>
+        @endif
     </div>
-    @endif
-
     <div class="container-fluid py-4">
         <div class="row">
           <div class="col-12">
@@ -56,10 +57,7 @@
                             <td class="text-sm font-weight-normal">
 
                                 <a href="{{ route('strains.edit',$strain->id) }}">
-                                    <i class="material-icons  text-primary position-relative text-lg">edit</i>
-                                </a>
-                                <a href="javascript:;" data-bs-toggle="tooltip" data-bs-original-title="Preview product">
-                                    <i class="material-icons text-info position-relative text-lg  data-bs-toggle="modal" data-bs-target="#exampleModal"" >visibility</i>
+                                    <i class="material-icons  text-primary position-relative text-lg">visibility</i>
                                 </a>
                                 <form action="{{ route('strains.destroy',$strain->id) }}" method="post">
                                     @csrf

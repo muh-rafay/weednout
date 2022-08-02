@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Strain;
+use App\Models\Assesment;
 
 class StrainController extends Controller
 {
@@ -26,7 +27,8 @@ class StrainController extends Controller
      */
     public function create()
     {
-        return view('admin.strain.create');
+        $assesments = Assesment::get();
+        return view('admin.strain.create',compact('assesments'));
     }
 
     /**

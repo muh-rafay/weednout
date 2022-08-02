@@ -18,8 +18,8 @@ class HomeController extends Controller
             return view('dispenser.dashboard');
         }
         elseif(Auth::user()->hasrole('client')){
-            
-            return view('client.dashboard');
+
+            return view('client.check_medication');
         }
     }
 }

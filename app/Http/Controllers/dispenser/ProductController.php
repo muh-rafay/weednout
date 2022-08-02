@@ -51,6 +51,7 @@ class ProductController extends Controller
             'feature'       => $request->feature,
             'price'         => $request->price,
             'location'      => $request->location,
+            'zipcode'      =>  $request->zipcode,
             'description'   => $request->description,
             'image'         => $image,
             'created_by'    => Auth::user()->id
