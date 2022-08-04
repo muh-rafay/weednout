@@ -12,10 +12,11 @@
       <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar" style="justify-content:end;">
         <ul class="navbar-nav  " >
           <li class="nav-item">
-            <div class="btn btn-warning btn-sm">
-                <form method="POST" action="{{ route('logout') }}">
+            <div class="btn bg-gradient-success btn-sm" >
+            
+                <form method="POST" action="{{ route('logout') }}"  >
                     @csrf
-                    <x-dropdown-link :href="route('logout')"
+                    <x-dropdown-link :href="route('logout')" style="text-decoration:none !important; color:#fff" 
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
                         {{ __('Log Out') }}

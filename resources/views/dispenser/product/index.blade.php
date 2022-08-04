@@ -60,7 +60,7 @@
                 </div>
                 <div class="ms-auto my-auto mt-lg-0 mt-4">
                     <div class="ms-auto my-auto ">
-                        <a href="{{ route('dispenser_products.create') }}" style="background-color: #087807; color: #fff;" class="btn  btn-sm mb-0">+&nbsp; Add Product</a>
+                        <a href="{{ route('dispenser_products.create') }}" style="color: #fff;" class="btn  bg-gradient-success btn-sm mb-0">+&nbsp; Add Product</a>
                     </div>
                 </div>
             </div>

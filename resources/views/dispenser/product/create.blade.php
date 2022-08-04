@@ -13,7 +13,7 @@
             <div class="card">
                 <div class="card-header">
                     <div>
-                        <h5 class="mb-0" style="color:#087807 ;">Add Products</h5>
+                        <h5 class="mb-0  " style="color:#087807 ;">Add Products</h5>
                     </div>
                 </div>
                 <div class="card-body">
@@ -80,7 +80,7 @@
                         </div>
 
                         <div>
-                            <button type="submit" class="btn mx-3 mb-2" style="background-color:#087807;color:#fff;float: right;">Add</button>
+                            <button type="submit" class="btn bg-gradient-success   mx-3 mb-2" style="color:#fff;float: right;">Add</button>
                         </div>
                     </form>
                 </div>

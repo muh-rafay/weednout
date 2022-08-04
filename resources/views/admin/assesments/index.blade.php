@@ -15,8 +15,8 @@
               <div class="row mx-5 py-4">
                <form action="{{ route("assesments.store") }}" method="post">
                 @csrf
-                  {{-- <div class="col-12 d-flex py-3">
-                        <div class="col-2 "><p>Question</p></div>
+                  {{-- <div class="col-xl-12 d-flex py-3">
+                        <div ><p>Question</p></div>
                           <select class="form-control" name="question_id" id="choices-category-edit">
                             @foreach ($questions as $question)
                             <option value="{{ $question->id }}" selected >{{  }}</option>
@@ -24,8 +24,8 @@
                             <option value="1" selected >How do you want to feel today</option>
                           </select>
                         </div> --}}
-                        <div class="col-12 d-flex py-3">
-                              <div class="col-2  "><p>Type</p></div>
+                        <div class="col-10  py-3">
+                              <div ><p class="text-bold">Type</p></div>
                               <select class="form-control" name="type" id="choices-category-edit">
                                 <option value="Recretional" selected >Recretional</option>
                                 <option value="Medical" >Medical</option>
@@ -44,7 +44,7 @@
                                         </td>
                                         <td style=" border: none;"><input type="text" name="addMoreInputFields[0][title]" placeholder="Enter title" class="form-control" />
                                         </td>
-                                        <td style=" border: none;"><button type="button" style=" border: none;" name="add" id="dynamic-ar" class="btn btn-primary">Add More</button></td>
+                                        <td style=" border: none;"><button type="button" style=" border: none;" name="add" id="dynamic-ar" class="btn bg-gradient-success">Add More</button></td>
                                     </tr>
                                 </table>
                             </div>
