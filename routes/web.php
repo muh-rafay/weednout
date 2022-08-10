@@ -17,6 +17,7 @@ use App\Http\Controllers\dispenser\ProfileController as dispenser_profile;
 use App\Http\Controllers\client\ProfileController as client_profile;
 use App\Http\Controllers\client\ProductController as client_product;
 use App\Http\Controllers\client\HistoryController;
+use App\Http\Controllers\client\AssessmentController as client_assessmetents;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,6 +61,9 @@ Route::group(['prefix' => 'client', 'middleware' => ['role:client']], function()
     Route::post('update', [client_profile::class,'password_reset'])->name('update_info');
     Route::resource('client_products', client_product::class);
     Route::resource('histories', HistoryController::class);
+    Route::resource('client_assessmetents', client_assessmetents::class);
+    Route::get('get_assessment/{link}',  [client_assessmetents::class,'get_assessment'])->name('get.assessment');
+
 });
 
 require __DIR__.'/auth.php';

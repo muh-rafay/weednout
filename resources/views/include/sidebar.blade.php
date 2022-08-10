@@ -38,18 +38,14 @@
                 </li>
             @endif
 
-              <li class="nav-item">
-                <div class="offset-2">
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <x-dropdown-link :href="route('logout')"
-                                onclick="event.preventDefault();
-                                            this.closest('form').submit();">
-                            {{ __('Log Out') }}
-                        </x-dropdown-link>
-                    </form>
-                </div>
-              </li>
+            <li class="nav-item">
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a class="nav-link text-" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
+                         <span class="sidenav-normal  ms-4  ps-1"  style="color: #087807;font-weight: bold;">  Logout</span>
+                    </a>
+                </form>
+            </li>
             </ul>
           </div>
         </li>
@@ -59,8 +55,8 @@
           <div class="collapse  show " id="dashboardsExamples">
             <ul class="nav ">
             @if(Auth::user()->hasrole('admin'))
-              <li class="nav-item  " id="navlink " >
-                <a class="nav-link "  href="{{ route('dashboard') }}">
+              <li class="nav-item" id="navlink " >
+                <a class="nav-link"  href="{{ route('dashboard') }}">
                   <i class="material-icons-round opacity-10" style="font-size: 1rem;color:#087807 ">dashboard</i>
                   <span class="nav-link-text  sidenav-normal  ms-2  ps-1  " style="color: #087807;font-weight: bold;" > Dashboard</span>
                 </a>
@@ -229,7 +225,7 @@
                 </a>
             </li>
             <li class="nav-item " id="navlink">
-                <a class="nav-link text-success " href="">
+                <a class="nav-link text-success " href="{{ route("client_assessmetents.index") }}">
                   <i class="fa fa-search" style="font-size: 1rem;color:#087807 ;font-weight: bold;" ></i>
                   <span class="sidenav-normal  ms-2  ps-1"  style="color: #087807;font-weight: bold;"> Assesments  </span>
                 </a>
