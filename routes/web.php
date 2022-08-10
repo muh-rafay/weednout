@@ -34,6 +34,10 @@ use App\Http\Controllers\client\HistoryController;
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/',[HomeController::class,'index' ] )->name('dashboard');
 });
+Route::get('check_medication',[HomeController::class,'check_medication' ] )->name('check.medication');
+Route::get('add_medication/{id}',[HomeController::class,'add_medication' ] )->name('add.medication');
+Route::post('store_medication',[HomeController::class,'store_medication' ] )->name('store.medication');
+
 //Admin routes
 Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
 
@@ -42,7 +46,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
     Route::resource('strains', StrainController::class);
     Route::resource('assesments', AssementsController::class);
     Route::resource('profiles', ProfileController::class);
-
 
 });
 //dispenser routes

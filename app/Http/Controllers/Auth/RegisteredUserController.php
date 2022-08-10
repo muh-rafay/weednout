@@ -52,11 +52,7 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
         $user->attachRole('client');
-        event(new Registered($user));
 
-
-
-
-        return redirect()->route('dashboard');
+        return view('client.check_medication',compact('user'));
     }
 }

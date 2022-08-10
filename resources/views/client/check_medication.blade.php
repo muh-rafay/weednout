@@ -9,9 +9,10 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 mt-sm-0 mt-4">
                         <div class="card  mb-2 cardhv text-center" >
                             <div class="nav-link text-success py-4 " href="">
-                                <label class="form-label"><h5>ARE YOU WANT TO ON MEDICATION...?</h5></label>
+                                <label class="form-label"><h5>ARE YOU ON MEDICATION...?</h5></label>
                                 <br>
-                                <a href="" class="btn btn-success">Yes</a>
+
+                                <a href="{{ route('add.medication', $user->id ) }}" class="btn btn-success">Yes</a>
                                 <a href="{{ route('dashboard') }}" class="btn btn-secondary">No</a>
                             </div>
                         </div>
