@@ -32,11 +32,11 @@
                       <i class="material-icons text-lg">star_outline</i>
                     </div>
                     <br>
-                    <h4 class="mt-  1">Freature</h4>
-                    <div class="d-flex"><p >Type of Strain:  </p><h6 >indica</h6></div>
-                    <div class="d-flex"><p >Effect:  </p><h6 >giggly,talkative,Happy</h6></div>
-                    <div class="d-flex"><p >Taste:   </p><h6>Berry,Earthy</h6></div>
-                    <div class="d-flex"><p >Side effect:   </p><h6>concern,panic attact</h6></div>
+                    <h4 class="mt-1 text-left">Freature</h4>
+                    <div class="d-flex"><p  class="px-2">Type of Strain:  </p><h6  class="pt-1">indica</h6></div>
+                    <div class="d-flex"><p class="px-2">Effect:  </p><h6 class="pt-1" >giggly,talkative,Happy</h6></div>
+                    <div class="d-flex"><p class="px-2">Taste:   </p><h6 class="pt-1">Berry,Earthy</h6></div>
+                    <div class="d-flex"><p class="px-2">Side effect:   </p><h6 class="pt-1">concern,panic attact</h6></div>
                     </div>
                   </div>
                 </div>
