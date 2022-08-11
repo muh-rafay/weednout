@@ -41,13 +41,14 @@ class AssementsController extends Controller
 
         foreach ($request->addMoreInputFields as $key => $value)
         {
+
             $image = null;
-            if($request->file($value['image']))
+            if(($value['image']) != null)
             {
-                $file= $request->file($value['image']);
-                $filename= $file->getClientOriginalName();
+                $filename=  $value['image']->getClientOriginalName();
                 $image =  $file-> move(public_path('public/Image'), $filename);
             }
+             dd("jjdj");
             Assesment::create([
                 'type' => $request->type,
                 'user_id' => auth()->user()->id,
