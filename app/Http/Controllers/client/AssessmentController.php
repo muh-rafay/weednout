@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\client;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Assesment;
-use App\Models\Question;
 
-class AssementsController extends Controller
+class AssessmentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,12 @@ class AssementsController extends Controller
      */
     public function index()
     {
-        $questions = Question::get();
-        return view('admin.assesments.index',compact('questions'));
+        return view('client.assements.assessment');
+    }
+    public function get_assessment($link){
+        $link = base64_decode($link);
+        $assessment = Assesment::where('type',$link)->get();
+        return view('client.assements.get_assessment',compact('assessment'));
     }
 
     /**
@@ -38,25 +41,7 @@ class AssementsController extends Controller
      */
     public function store(Request $request)
     {
-
-        foreach ($request->addMoreInputFields as $key => $value)
-        {
-
-            $image = null;
-            if(($value['image']) != null)
-            {
-                $filename=  $value['image']->getClientOriginalName();
-                $image =  $file-> move(public_path('public/Image'), $filename);
-            }
-             dd("jjdj");
-            Assesment::create([
-                'type' => $request->type,
-                'user_id' => auth()->user()->id,
-                'title' => $value['title'],
-                'image' => $image,
-            ]);
-            return redirect()->route('assesments.index')->with('success',"Assesment Added");
-        }
+        //
     }
 
     /**

@@ -10,22 +10,35 @@
         </a>
       </div>
       <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar" style="justify-content:end;">
-        <ul class="navbar-nav  " >
+
+        <ul class="navbar-nav  ">
           <li class="nav-item">
-            <div class="btn bg-gradient-success btn-sm" >
-            
-                <form method="POST" action="{{ route('logout') }}"  >
-                    @csrf
-                    <x-dropdown-link :href="route('logout')" style="text-decoration:none !important; color:#fff" 
-                            onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                        {{ __('Log Out') }}
-                    </x-dropdown-link>
-                </form>
-            </div>
-          </li>
+            <a href="" class="nav-link text-body p-0 position-relative" target="_blank">
+              </a></li><li class="nav-item dropdown pe-2"><a href="" class="nav-link text-body p-0 position-relative" target="_blank">
+                </a><a href="javascript:;" class="nav-link text-body p-0 position-relative" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="../../assets/img/team-3.jpg" class="avatar">
+
+               </a>
+               <ul class="dropdown-menu dropdown-menu-end p-2 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                 <li class="mb-2">
+                  <a class="nav-link text-white" href="../../pages/dashboards/Profile.html">
+                    <span class="sidenav-normal  ms-3  ps-1" style="color: #087807;font-weight: bold;"> My Profile </span>
+                  </a>
+
+                 </li>
+                 <li class="mb-2">
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <a class="nav-link text-" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
+                             <span class="sidenav-normal  ms-4  ps-1"  style="color: #087807;font-weight: bold;">  Logout</span>
+                        </a>
+                    </form>
+
+                 </li>
+
+               </ul>
+             </li>
         </ul>
       </div>
     </div>
   </nav>
- 
