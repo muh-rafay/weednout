@@ -26,20 +26,19 @@
                 <form method="post" action="">
                     @csrf
                     <div class="row">
-                        @foreach ( as )
-                        <div class="col-12  d-flex" style="justify-content:space-between ;">
+                        @foreach ($assessments as $assessment)
                             <div class="col-lg-3 col-md-6 col-sm-6  mx-1 mt-sm-0 mt-4">
                                 <div class="card  mb-2 ">
-                                <a class="nav-link   " href="">
-                                    <div class="form-check  mt-2" style="justify-content:left;">
+                                    <div class="form-check  mt-2" >
                                         <input class="form-check-input" type="checkbox"   name="chk" onclick="return  myfun()">
 
-                                        <p class="text-sm mb-3 text-capitalize  "  style="font-size: 13rem;font-weight: regular;margin-left:2.5rem">Calm</p>
+                                        <img src="{{asset($assessment->image)}}" class="avatar" style="margin-left: auto;
+                                        margin-right: auto;">
+                                        <p class="text-sm mb-3 text-capitalize  "  style="font-size: 13rem;font-weight: regular;margin-left:2.5rem">{{ $assessment->title }}</p>
+
                                     </div>
-                                </a>
                                 </div>
                             </div>
-                        </div>
                         @endforeach
 
                     </div>

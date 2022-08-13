@@ -13,7 +13,7 @@
               <h5 style="color:#087807">Assesments</h5>
             </div>
               <div class="row mx-5 py-4">
-               <form action="{{ route("assesments.store") }}" method="post">
+               <form action="{{ route("assesments.store") }}" method="post" enctype="multipart/form-data">
                 @csrf
                   {{-- <div class="col-xl-12 d-flex py-3">
                         <div ><p>Question</p></div>
@@ -27,7 +27,7 @@
                         <div class="col-10  py-3">
                               <div ><p class="text-bold">Type</p></div>
                               <select class="form-control" name="type" id="choices-category-edit">
-                                <option value="Recretional" selected >Recretional</option>
+                                <option value="Recreational" selected >Recreational</option>
                                 <option value="Medical" >Medical</option>
                               </select>
                             </div>

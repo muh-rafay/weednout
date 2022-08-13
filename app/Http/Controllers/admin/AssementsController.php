@@ -38,25 +38,24 @@ class AssementsController extends Controller
      */
     public function store(Request $request)
     {
-
-        foreach ($request->addMoreInputFields as $key => $value)
+        foreach($request->addMoreInputFields as $file)
         {
 
             $image = null;
-            if(($value['image']) != null)
-            {
-                $filename=  $value['image']->getClientOriginalName();
-                $image =  $file-> move(public_path('public/Image'), $filename);
+            if(file($file['image'])){
+                $destinationPath = 'image/';
+                $profileImage =$file['image']->getClientOriginalExtension();
+                $image =  $file['image']->move($destinationPath, $profileImage);
             }
-             dd("jjdj");
             Assesment::create([
                 'type' => $request->type,
                 'user_id' => auth()->user()->id,
-                'title' => $value['title'],
+                'title' => $file['title'],
                 'image' => $image,
             ]);
-            return redirect()->route('assesments.index')->with('success',"Assesment Added");
+
         }
+        return redirect()->route('assesments.index')->with('success',"Assesment Added");
     }
 
     /**

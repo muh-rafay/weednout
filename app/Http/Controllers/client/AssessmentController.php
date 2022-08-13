@@ -19,8 +19,10 @@ class AssessmentController extends Controller
     }
     public function get_assessment($link){
         $link = base64_decode($link);
-        $assessment = Assesment::where('type',$link)->get();
-        return view('client.assements.get_assessment',compact('assessment'));
+        // dd($link);
+        $assessments = Assesment::where('type',$link)->get();
+        // dd($assessments);
+        return view('client.assements.get_assessment',compact('assessments'));
     }
 
     /**
