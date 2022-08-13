@@ -14,7 +14,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card  mb-2">
-              <div class="card-header p-3 pt-2">
+              <div class="card-header p-3 pt-2 bg-transparent">
                 <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
                   <i class="fa fa-search" style="font-size: 1rem;color:#fff ;font-weight: bold;" ></i>
                 </div>
@@ -23,7 +23,7 @@
                   <h4 class="mb-0 text-info">20</h4>
                 </div>
               </div>
-              <hr class="dark horizontal my-0">
+            
               <div class="card-footer p-1 d-flex">
                   <i class="material-icons opacity-10 mx-1 ">history</i>
                   <p class="mb-0" style="font-size: 13px;">Update Now</p>
@@ -32,7 +32,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 mt-sm-0 mt-4">
             <div class="card  mb-2">
-              <div class="card-header p-3 pt-2">
+              <div class="card-header p-3 pt-2 bg-transparent">
                 <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary shadow text-center border-radius-xl mt-n4 position-absolute">
                   <i class="material-icons opacity-10 mx-1 "style="font-size: 1rem;color:#fff ;font-weight: bold;" >history</i>
                 </div>
@@ -41,7 +41,7 @@
                   <h4 class="mb-0 text-info ">20</h4>
                 </div>
               </div>
-              <hr class="dark horizontal my-0">
+         
               <div class="card-footer p-1 d-flex">
                   <i class="material-icons opacity-10 mx-1 ">history</i>
                   <p class="mb-0" style="font-size: 13px;">Update Now</p>
@@ -59,7 +59,7 @@
                   <h4 class="mb-0 text-info">20</h4>
                 </div>
               </div>
-              <hr class="horizontal my-0 dark">
+           
               <div class="card-footer p-1 d-flex">
                   <i class="material-icons opacity-10 mx-1 ">history</i>
                   <p class="mb-0" style="font-size: 13px;">Update Now</p>
@@ -77,7 +77,7 @@
                   <h4 class="mb-0 text-info">20</h4>
                 </div>
               </div>
-              <hr class="horizontal my-0 dark">
+             
               <div class="card-footer p-1 d-flex">
                   <i class="material-icons opacity-10 mx-1 ">history</i>
                   <p class="mb-0" style="font-size: 13px;">Update Now</p>
