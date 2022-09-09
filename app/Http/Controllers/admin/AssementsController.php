@@ -38,15 +38,18 @@ class AssementsController extends Controller
      */
     public function store(Request $request)
     {
-        foreach($request->addMoreInputFields as $file)
+        foreach($request->addMoreInputFields as $key => $file)
         {
 
             $image = null;
+
             if(file($file['image'])){
+
                 $destinationPath = 'image/';
                 $profileImage =$file['image']->getClientOriginalExtension();
                 $image =  $file['image']->move($destinationPath, $profileImage);
             }
+
             Assesment::create([
                 'type' => $request->type,
                 'user_id' => auth()->user()->id,

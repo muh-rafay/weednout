@@ -5,6 +5,7 @@ namespace App\Http\Controllers\client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Assesment;
+use App\Models\Strain;
 
 class AssessmentController extends Controller
 {
@@ -23,6 +24,13 @@ class AssessmentController extends Controller
         $assessments = Assesment::where('type',$link)->get();
         // dd($assessments);
         return view('client.assements.get_assessment',compact('assessments'));
+    }
+    public function get_strain(Request $request){
+        $ids = $request->chk;
+        foreach($ids as $key => $strain){
+           $assessment =  Assesment::find($strain);
+           dd($assessment);
+        }
     }
 
     /**
