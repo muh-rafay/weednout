@@ -66,7 +66,8 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('client.profile.edit',compact('user'));
     }
 
     /**
@@ -78,7 +79,26 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+        $image = $user->image;
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+           $image=  $image->move($destinationPath, $profileImage);
+
+        }   
+        User::where('id',$id)->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'gender' => $request->gender,
+            'zipcode' => $request->zipcode,
+            'height' => $request->height,
+            'weight' => $request->weight,
+            'haircolor'  => $request->haircolor,
+            'image' => $image
+        ]);
+        return redirect()->route('client_profiles.index')->with('success' ,"Profile Updated Successfully");
     }
 
     /**

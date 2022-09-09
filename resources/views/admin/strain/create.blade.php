@@ -54,10 +54,10 @@
                 <div class="col-md-10">
                     <div class="input-group input-group-outline">
                         <div class="col-md-12">
-                            <select class="form-control" name="effect" id="choices-category-edit">
+                            <select name="effect" multiple="" class="form-control pb-4" id="exampleFormControlSelect2">
                                 @foreach ($assesments as $assesment)
                                 <option value="{{ $assesment->title }}">{{ $assesment->title }}</option>
-                            @endforeach
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -67,10 +67,9 @@
                 <div class="col-2  pt-3 "><p>Side Effects</p></div>
                 <div class="col-md-10">
                     <div class="input-group input-group-outline  my-2">
-
                       <input  type="text" name="sideeffects" class="form-control" aria-label="text">
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="col-12 d-flex">
                 <div class="col-2  pt-3 "><p>Terpene Profile</p></div>

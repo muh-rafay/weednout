@@ -11,10 +11,11 @@
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
-  <link id="pagestyle" href="{{ asset('/assets/css/material-dashboard.css')}}" rel="stylesheet" />
+  <link id="pagestyle" href="{{ asset('assets/css/material-dashboard.css')}}" rel="stylesheet" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link id="pagestyle" href="{{ asset('assets/css/material-dashboard.css?v=3.0.5')}}" rel="stylesheet" />
   <script>
      if (document.getElementById('choices-skills')) {
         var skills = document.getElementById('choices-skills');

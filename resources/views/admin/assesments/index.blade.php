@@ -26,7 +26,7 @@
                         </div> --}}
                         <div class="col-10  py-3">
                               <div ><p class="text-bold">Type</p></div>
-                              <select class="form-control" name="type" id="choices-category-edit">
+                              <select class="form-control" name="type" id="exampleFormControlSelect1">
                                 <option value="Recreational" selected >Recreational</option>
                                 <option value="Medical" >Medical</option>
                               </select>

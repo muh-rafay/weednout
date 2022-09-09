@@ -32,7 +32,9 @@ class User extends Authenticatable
         'height',
         'comapny',
         'address',
-        'zipcode'
+        'zipcode',
+        'image'
+
     ];
 
     /**

@@ -81,9 +81,9 @@
                 </h5>
                 <div class="col-lg-12 d-flex">
                 <div class="col-sm-4  my-auto ">
-                {{-- <div class="avatar avatar-xl position-relative ">
-                    <img src="" alt="bruce" class="  shadow-sm" style="border-radius: 10px;width: 10rem; margin-right: 2rem;justify-content: center;">
-                </div> --}}
+                <div class="avatar avatar-xl position-relative ">
+                    <img src="{{ asset($user->image) }}" alt="bruce" class="  shadow-sm" style="border-radius: 10px;width: 10rem; margin-right: 2rem;justify-content: center;">
+                </div>
                 </div>
                 <div class="col-sm-4 ">
                 <div >
@@ -134,7 +134,7 @@
                             {{ $user->weight }}
                             </p>
                         <p class="mb-1 font-weight-bolder">
-                            {{ $user->fair }}
+                            {{ $user->haircolor }}
                         </p>
                     <p class="mb-0 font-weight-normal text-sm">
 
@@ -142,11 +142,9 @@
                     </div>
                 </div>
             </div>
-            <hr class="horizontal dark mt-1"><div  style="align-items: left;">
-                {{-- <h6 class="mb-1 font-weight-bolder">
-                    Medication
-                </h6>
-                <p >lorem, Lorem,Lorem</p> --}}
+            <hr class="horizontal dark mt-1">
+            <div  style="align-items:right;">
+                <a href="{{ route('client_profiles.edit',$user->id) }}" class="btn btn-primary btn-sm">Edit</a>
             </div>
 
 
@@ -196,4 +194,5 @@
         </div>
     </div>
 </div>
+
 @endsection

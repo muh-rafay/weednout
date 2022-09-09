@@ -63,6 +63,7 @@ Route::group(['prefix' => 'client', 'middleware' => ['role:client']], function()
     Route::resource('histories', HistoryController::class);
     Route::resource('client_assessmetents', client_assessmetents::class);
     Route::get('get_assessment/{link}',  [client_assessmetents::class,'get_assessment'])->name('get.assessment');
+    
 
 });
 
