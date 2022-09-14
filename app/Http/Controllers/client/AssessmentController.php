@@ -26,6 +26,7 @@ class AssessmentController extends Controller
         return view('client.assements.get_assessment',compact('assessments'));
     }
     public function get_strain(Request $request){
+       
         $ids = $request->chk;
         foreach($ids as $key => $strain){
            $assessment =  Assesment::find($strain);
