@@ -34,7 +34,7 @@
                         <br>
                         <h4 class="mt-  1">Freature</h4>
                         <div class="d-flex"><h6>{{ $product->feature }}</h6></div>
-                        {{-- <div class="d-flex"><p >Type of Strain:  </p><h6 >indica</h6></div>
+                        {{-- <div class="d-flex"><p >Type of Strain:  </p><h6 >indica</h6></div>   
                         <div class="d-flex"><p >Effect:  </p><h6 >giggly,talkative,Happy</h6></div>
                         <div class="d-flex"><p >Taste:   </p><h6>Berry,Earthy</h6></div>
                         <div class="d-flex"><p >Side effect:   </p><h6>concern,panic attact</h6></div> --}}
@@ -94,17 +94,31 @@
                             <td class="text-sm font-weight-normal">{{ $product->feature }}</td>
                             <td class="text-sm font-weight-normal">{{ $product->description }}</td>
                             <td class="text-sm font-weight-normal">{{ $product->price }}</td>
-                            <td class="text-sm font-weight-normal">
+                            <td class="text-sm font-weight-normal d-flex">
                                 <a href="javascript:;" data-bs-toggle="tooltip" data-bs-original-title="Preview product">
                                     <i class="material-icons text-info position-relative text-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal{{ $product->id }}">visibility</i>
                                     </a>
                                     <form action="{{ route('products.destroy',$product->id) }}" method="post">
                                         @csrf
                                         @method('DELETE')
-                                           <button type="submit" class="d-flex"> <i class="material-icons  text-primary position-relative text-lg">delete</i>
+                                           <button type="submit" > 
+                                            <a><i class="material-icons  text-primary position-relative text-lg">delete</i></a> 
                                            </button>
                                     </form>
                             </td>
+                            <!-- <td class="text-sm font-weight-normal d-flex">
+                                    <a href="javascript" data-bs-toggle="tooltip" data-bs-original-title="Preview product">
+                                        <i class="material-icons text-info position-relative text-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal{{ $product->id }}" >visibility</i>
+                                      </a>
+                                      <form action="{{ route('products.destroy',$product->id) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                      <a href="javascript:;" data-bs-toggle="tooltip" data-bs-original-title="Delete product">
+                                        <i class="material-icons  text-primary position-relative text-lg">delete</i>
+                                    </a>
+                                    </form>
+
+                                </td> -->
                         </tr>
                         @endforeach
 

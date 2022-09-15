@@ -34,11 +34,11 @@
                                                 <input class="form-check-input" value="{{ $assessment->id }}" type="checkbox" id="assessment_id"
                                                     name="chk[]" value="{{ $assessment->id }}" onclick="return  myfun({{ $assessment->id }})">
 
-                                                <img src="{{ asset($assessment->image) }}" class="avatar"
-                                                    style="margin-left:auto !important;
-                                        margin-right: auto; !important">
+                                                <img src="{{ asset($assessment->image) }}" class="avatar "
+                                                    style="margin-left:1rem !important;text:center !important
+                                                    margin-right: auto; !important">
                                                 <p class="text-sm mb-3 text-capitalize  "
-                                                    style="font-size: 13rem;font-weight: regular;margin-left:2.5rem">
+                                                    style="font-size: 13rem;font-weight: regular;margin-left:2.9rem">
                                                     {{ $assessment->title }}</p>
 
                                             </div>

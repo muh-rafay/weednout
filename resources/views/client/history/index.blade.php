@@ -14,29 +14,28 @@
           <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <h5 class="mb-4">Product Details</h5>
+                <!-- <h5 class="mb-4">Product Details</h5> -->
                 <div class="row">
                   <div class="col-xl-5 col-lg-6 text-center">
-                    <img class="w-100 h-100 border-radius-lg shadow-lg " src="../../assets/img/image 7.jpg" alt="chair">
+                    <img class="w-100 h-100 border-radius-lg shadow-lg " src="{{asset('/assets/img/image 5.jpg')}}" alt="chair">
 
                   </div>
                   <div class="col-lg-5 mx-auto">
-                    <h3 class="mt-lg-0 mt-1">Sweet tooth</h3>
-                    <h6 class="mb-0 mt-1">Item :lorem ipsum</h6>
-                    <h5>zip code: 2345</h5>
+                    <h4 class="mt-lg-0 mt-1  text-success">Sweet tooth</h4>
+                    <p class="mb-0 mt-1">Item :lorem ipsum</p>
+                    <p>zip code: 2345</p>
                     <div class="rating">
-                      <i class="material-icons text-lg">grade</i>
-                      <i class="material-icons text-lg">grade</i>
-                      <i class="material-icons text-lg">grade</i>
-                      <i class="material-icons text-lg">grade</i>
-                      <i class="material-icons text-lg">star_outline</i>
+                      <i class="material-icons text-warning text-lg">grade</i>
+                       <i class="material-icons   text-warning text-lg">grade</i>
+                      <i class="material-icons text-warning text-lg">grade</i>
+                      <i class="material-icons text-warning text-lg">star_outline</i>
                     </div>
                     <br>
-                    <h4 class="mt-1 text-left">Freature</h4>
-                    <div class="d-flex"><p  class="px-2">Type of Strain:  </p><h6  class="pt-1">indica</h6></div>
-                    <div class="d-flex"><p class="px-2">Effect:  </p><h6 class="pt-1" >giggly,talkative,Happy</h6></div>
-                    <div class="d-flex"><p class="px-2">Taste:   </p><h6 class="pt-1">Berry,Earthy</h6></div>
-                    <div class="d-flex"><p class="px-2">Side effect:   </p><h6 class="pt-1">concern,panic attact</h6></div>
+                    <h4 class="mt-1 text-left text-success">Feature</h4>
+                    <div class="d-flex"><p  class="px-2">Type of Strain:  </p><h6 class=" text-success">indica</h6></div>
+                    <div class="d-flex"><p class="px-2">Effect:  </p><h6  class=" text-success">giggly,talkative,Happy</h6></div>
+                    <div class="d-flex"><p class="px-2">Taste:   </p><h6 class=" text-success" >Berry,Earthy</h6></div>
+                    <div class="d-flex"><p class="px-2">Side effect:   </p><h6 class=" text-success">concern,panic attact</h6></div>
                     </div>
                   </div>
                 </div>

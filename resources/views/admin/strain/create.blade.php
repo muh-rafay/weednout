@@ -21,6 +21,18 @@
                       <div class="input-group input-group-outline my-2">
 
                         <input  type="text" name="title" class="form-control" aria-label="text">
+                        <!-- <select class="form-control" name="choices-questions" id="choices-questions">
+            <option value="Question 1">Question 1</option>
+            <option value="Question 2">Question 2</option>
+            <option value="Question 3">Question 3</option>
+            <option value="Your Question" disabled>Your Question</option>
+          </select> -->
+          <select class="form-control" name="choices-gender" id="choices-gender">
+                              <option value="Question 1" selected >Question 1</option>
+                                <option value="Question 1" >Question 1</option>
+                                <option  value="Question 3">Question 1</option>
+                                <option value="French" >Question 1</option>
+                               </select>
                       </div>
                     </div>
               </div>
@@ -28,24 +40,40 @@
               <div class="col-12 my-2 d-flex">
                   <div class="col-2   pt-3"><p>Terpene Name</p></div>
                     <div class="col-md-10">
-                        <select class="form-control" name="terpeneName" id="choices-category-edit">
+                    <div class="input-group input-group-outline  my-2">
+                              <select class="form-control" name="choices-gender" id="choices-gender">
+                              <option  value="English" selected >Camphane</option>
+                                <option value="French" >Camphane</option>
+                                <option value="French"  >Camphane</option>
+                                <option value="French" >Camphane</option>
+                               </select>
+                                 </div>
+                        <!-- <select class="form-control" name="terpeneName" id="choices-category-edit">
                         <option value="English" selected >Camphane</option>
                         <option value="French" >Camphane</option>
                         <option value="French" >Camphane</option>
                         <option value="French" >Camphane</option>
-                        </select>
+                        </select> -->
                     </div>
               </div>
 
               <div class="col-12  my-2 d-flex">
                 <div class="col-2  pt-3 "><p>Type of Strain</p></div>
                 <div class="col-md-10">
-                  <select class="form-control" name="typeofstrain" id="choices-category-edit">
+                <div class="input-group input-group-outline  my-2">
+                              <select class="form-control" name="choices-gender" id="choices-gender">
+                              <option  value="English"  selected >Hybride 50/50</option>
+                                <option value="French" >Hybride 50/50</option>
+                                <option value="French" >Hybride 50/50</option>
+                                <option value="French" >Hybride 50/50</option>
+                               </select>
+                                 </div>
+                  <!-- <select class="form-control" name="typeofstrain" id="choices-category-edit">
                     <option value="English" selected >Hybride 50/50</option>
                     <option value="French" >Hybride 50/50</option>
                     <option value="French" >Hybride 50/50</option>
                     <option value="French" >Hybride 50/50</option>
-                  </select>
+                  </select> -->
                   </div>
             </div>
 

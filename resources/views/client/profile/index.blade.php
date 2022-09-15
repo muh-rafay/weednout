@@ -34,7 +34,7 @@
 
 <div class="container-fluid">
     <div class="row mb-5">
-        <div class="col-lg-3 mt-1 py-1">
+        <div class="col-lg-3  ">
         <div class="card position-sticky top-1">
             <div class="flex-column border-radius-lg p-5">
             <div class="tab">
@@ -54,7 +54,7 @@
             </div>
         </div>
         </div>
-        <div class="col-lg-9 mt-lg-0  mt-2">
+        <div class="col-lg-9 mt-lg-0  ">
         <!-- Card Profile -->
         @if($errors->any())
         <div class="alert alert-danger">
@@ -82,7 +82,7 @@
                 <div class="col-lg-12 d-flex">
                 <div class="col-sm-4  my-auto ">
                 <div class="avatar avatar-xl position-relative ">
-                    <img src="{{ asset($user->image) }}" alt="bruce" class="  shadow-sm" style="border-radius: 10px;width: 10rem; margin-right: 2rem;justify-content: center;">
+                    <img src="{{asset('/assets/img/ivana-square.jpg')}}" alt="bruce" class="  shadow-sm" style="border-radius: 10px;width: 10rem; margin-right: 2rem;justify-content: center;">
                 </div>
                 </div>
                 <div class="col-sm-4 ">
@@ -161,18 +161,18 @@
                 <input type="hidden" name="token" value="{{ $user->password }}">
                 <input type="hidden" name="email" value="{{ $user->email }}">
                 <div class="col-12 d-flex">
-                    <div class="col-2  my-2"><p>New password</p></div>
+                    <div class="col-2  my-1"><p>New password</p></div>
                     <div class="col-md-10">
-                        <div class="input-group input-group-outline  my-3">
+                        <div class="input-group input-group-outline my-1 ">
                             <label class="form-label">New Password</label>
                             <input  type="password" class="form-control" name="password" aria-label="Password" autocomplete="none">
                         </div>
                         </div>
                 </div>
                 <div class="col-12 d-flex">
-                    <div class="col-2  my-2"><p>Confirm New  password</p></div>
+                    <div class="col-2 my-1"><p>Confirm New  password</p></div>
                     <div class="col-md-10">
-                        <div class="input-group input-group-outline  my-3">
+                        <div class="input-group input-group-outline my-1 ">
                             <label class="form-label">Confirm New  password</label>
                             <input  type="password" class="form-control" name="password_confirmation" aria-label="Password" autocomplete="none">
                         </div>

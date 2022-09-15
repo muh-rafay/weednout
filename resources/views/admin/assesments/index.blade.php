@@ -26,10 +26,16 @@
                         </div> --}}
                         <div class="col-10  py-3">
                               <div ><p class="text-bold">Type</p></div>
-                              <select class="form-control" name="type" id="exampleFormControlSelect1">
+                              <div class="input-group input-group-outline  my-2">
+                              <select class="form-control" name="choices-gender" id="choices-gender">
+                              <option value="Recreational" selected >Recreational</option>
+                                <option value="Medical" >Medical</option>
+                               </select>
+                                 </div>
+                              <!-- <select class="form-control" name="type" id="exampleFormControlSelect1">
                                 <option value="Recreational" selected >Recreational</option>
                                 <option value="Medical" >Medical</option>
-                              </select>
+                              </select> -->
                             </div>
                           <div class="row pt-3 ">
                             <div class="customer_records px-1">
@@ -40,9 +46,20 @@
                                         <th style=" border: none;">Action</th>
                                     </tr>
                                     <tr style=" border: none;">
-                                        <td style=" border: none;"><input type="file" name="addMoreInputFields[0][image]"  class="form-control" />
+                                        <td style=" border: none;">
+                                        <div class="input-group input-group-outline  my-2">
+                      <label class="form-label" for="customFile"> </label>
+                      <input type="file" name="image" class="form-control" id="customFile" />
+                    </div>
+                                        <!-- <input type="file" name="addMoreInputFields[0][image]"  class="form-control" /> -->
+
                                         </td>
-                                        <td style=" border: none;"><input type="text" name="addMoreInputFields[0][title]" placeholder="Enter title" class="form-control" />
+                                        <td style=" border: none;">
+                                        <!-- <input type="text" name="addMoreInputFields[0][title]" placeholder="Enter title" class="form-control" /> -->
+                                        <div class="input-group input-group-outline my-2">
+
+<input  type="text" name="title" class="form-control" aria-label="text">
+</div>
                                         </td>
                                         <td style=" border: none;"><button type="button" style=" border: none;" name="add" id="dynamic-ar" class="btn bg-gradient-success">Add More</button></td>
                                     </tr>
@@ -54,9 +71,8 @@
                                 var i = 0;
                                 $("#dynamic-ar").click(function () {
                                     ++i;
-                                    $("#dynamicAddRemove").append('<tr style=" border: none;"><td style=" border: none;"><input type="file" name="addMoreInputFields[' + i +
-                                        '][image]"  class="form-control" /></td><td style=" border: none;"><input type="text" name="addMoreInputFields[' + i +
-                                        '][title]" placeholder="Enter title" class="form-control" /></td><td style=" border: none;"><button type="button" style=" border: none;" class="btn btn-outline-danger remove-input-field">Delete</button></td></tr>'
+                                    $("#dynamicAddRemove").append('<tr style=" border: none;"><td style=" border: none;"><div class="input-group input-group-outline  my-2"> <input type="file"   class="form-control" id="customFile" name="addMoreInputFields[' + i +'][image]"  class="form-control" /> </div></td><td style=" border: none;"><div class="input-group input-group-outline my-2"><input  type="text" name="addMoreInputFields[' + i +
+                                        '][title]" placeholder="Enter title" class="form-control" /></div></td><td style=" border: none;"><button type="button" style=" border: none;" class="btn bg-gradient-danger remove-input-field">Delete</button></td></tr>'
                                         );
                                 });
                                 $(document).on('click', '.remove-input-field', function () {

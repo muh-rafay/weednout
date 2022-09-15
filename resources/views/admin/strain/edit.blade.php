@@ -28,6 +28,7 @@
               <div class="col-12 my-2 d-flex">
                   <div class="col-2   pt-3"><p>Terpene Name</p></div>
                   <div class="col-md-10">
+                  <div class="input-group input-group-outline  my-2">
                     <select class="form-control" name="terpeneName" id="choices-category-edit">
 
                       <option value="Cam"  @if ($strain->terpeneName = "Cam")
@@ -40,12 +41,14 @@
                         selected="selected"
                     @endif>hane</option>
                     </select>
+</div>
                     </div>
               </div>
 
               <div class="col-12  my-2 d-flex">
                 <div class="col-2  pt-3 "><p>Type of Strain</p></div>
                 <div class="col-md-10">
+                <div class="input-group input-group-outline  my-2">
                   <select class="form-control" name="typeofstrain" id="choices-category-edit">
                     <option value="Hybride 50/80"  @if ($strain->typeofstrain = "Hybride 50/80")
                         selected="selected"
@@ -57,6 +60,7 @@
                         selected="selected"
                     @endif >Hybride 50/60</option>
                   </select>
+</div>
                   </div>
             </div>
 

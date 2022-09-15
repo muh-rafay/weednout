@@ -54,7 +54,7 @@
                             <td class="text-sm font-weight-normal">{{ $strain->effect }}</td>
                             <td class="text-sm font-weight-normal">{{ $strain->typeofstrain }}</td>
                             <td class="text-sm font-weight-normal">{{ $strain->sideeffects }}</td>
-                            <td class="text-sm font-weight-normal">
+                            <td class="text-sm font-weight-normal d-flex">
 
                                 <a href="{{ route('strains.edit',$strain->id) }}">
                                     <i class="material-icons  text-primary position-relative text-lg">visibility</i>
@@ -62,7 +62,7 @@
                                 <form action="{{ route('strains.destroy',$strain->id) }}" method="post">
                                     @csrf
                                     @method('DELETE')
-                                       <button type="submit" class="d-flex"> <i class="material-icons  text-primary position-relative text-lg">delete</i>
+                                       <button type="submit" class="d-flex bg-gradient-success"> <i class="material-icons  text-primary  position-relative text-lg">delete</i>
                                        </button>
                                 </form>
 

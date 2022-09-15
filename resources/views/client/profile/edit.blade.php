@@ -66,8 +66,9 @@
                     </div>
                     <div class="d-flex">
                         <div class="col-md-6 d-flex">
-                            <div class="col-3 pt-3"><p>Hair Colour</p></div>
-                            <div class="col-md-8">
+                            <div class="col-2 pt-3"><p>Hair Colour</p></div>
+                            <div class="col-md-9">
+                                
                                 <div class="input-group input-group-outline my-2">
                                     <input type="text" name="haircolor" value="{{ $user->haircolor }}" class="form-control" aria-label="text" />
                                 </div>

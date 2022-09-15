@@ -29,9 +29,9 @@ use App\Http\Controllers\client\AssessmentController as client_assessmetents;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/',[HomeController::class,'index' ] )->name('dashboard');
 });

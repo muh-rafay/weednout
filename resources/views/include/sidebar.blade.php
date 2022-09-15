@@ -11,7 +11,7 @@
       <ul class="navbar-nav">
         <li class="nav-item mb-2 mt-0">
           <a data-bs-toggle="collapse" href="#ProfileNav" class="nav-link text-white" aria-controls="ProfileNav" role="button" aria-expanded="false"  style="color: #087807;">
-            <img src="{{asset(auth()->user()->image)}}" class="avatar">
+            <img src="{{asset('/assets/img/ivana-square.jpg')}}" class="avatar">
             <span class="nav-link-text ms-2 ps-1"  style="color: #087807;font-weight: bold;">{{ Auth::user()->name }}</span>
           </a>
           <div class="collapse" id="ProfileNav" >
@@ -231,8 +231,8 @@
                 </a>
             </li>
             <li class="nav-item  " id="navlink">
-                <a class="nav-link text-success  " href="{{ route('histories.index') }}">
-                  <svg  style="width:1rem; height:1rem;font-weight: bolder; " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 502 502" style="enable-background:new 0 0 502 502;" xml:space="preserve">
+                <a class="nav-link text-success pl-3  " href="{{ route('histories.index') }}">
+                  <svg  style="width:1.2rem; height:1.2rem;font-weight: bolder; " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 502 502" style="enable-background:new 0 0 502 502;" xml:space="preserve">
                     <g>
                       <g>
                         <g>
