@@ -31,8 +31,8 @@
                                     <div class="col-lg-3 col-md-6 col-sm-6   mt-sm-0 mt-4">
                                         <div class="card  mb-2 ">
                                             <div class="form-check  mt-2">
-                                                <input class="form-check-input" value="{{ $assessment->id }}" type="checkbox" id="assessment_id"
-                                                    name="chk[]" value="{{ $assessment->id }}" onclick="return  myfun({{ $assessment->id }})">
+                                                <input class="form-check-input chk" value="{{ $assessment->id }}" type="checkbox"
+                                                    name="chk[]" onclick="return  myfun()">
 
                                                 <img src="{{ asset($assessment->image) }}" class="avatar "
                                                     style="margin-left:1rem !important;text:center !important
@@ -68,7 +68,7 @@
 
     <script type="text/javascript">
         function myfun(id) {
-            var a = document.getElementsByName('chk');
+            var a = document.getElementsByClass('chk');
             var newvar = 0;
 
 
