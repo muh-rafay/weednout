@@ -26,12 +26,21 @@ class AssessmentController extends Controller
         return view('client.assements.get_assessment',compact('assessments'));
     }
     public function get_strain(Request $request){
-       
+
         $ids = $request->chk;
-        foreach($ids as $key => $strain){
-           $assessment =  Assesment::find($strain);
-           dd($assessment);
+        $assessments =[];
+        foreach($ids as $key => $asses){
+           $assess =  Assesment::where('id',$asses)->pluck('title');
+           array_push($assessments,$assess);
         }
+        $strains = [];
+        foreach($assessments as $key => $assessment){
+           $strain = Strain::where('effect', 'like',$assessment)->get();
+           if(!empty($strain)){
+            array_push($strains,$strain);
+           }
+        }
+        return view('client.assements.strain',compact('strains'));
     }
 
     /**

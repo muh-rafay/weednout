@@ -21,12 +21,7 @@
                       <div class="input-group input-group-outline my-2">
 
                         <input  type="text" name="title" class="form-control" aria-label="text">
-                        <!-- <select class="form-control" name="choices-questions" id="choices-questions">
-            <option value="Question 1">Question 1</option>
-            <option value="Question 2">Question 2</option>
-            <option value="Question 3">Question 3</option>
-            <option value="Your Question" disabled>Your Question</option>
-          </select> -->
+
           <select class="form-control" name="choices-gender" id="choices-gender">
                               <option value="Question 1" selected >Question 1</option>
                                 <option value="Question 1" >Question 1</option>
@@ -48,12 +43,7 @@
                                 <option value="French" >Camphane</option>
                                </select>
                                  </div>
-                        <!-- <select class="form-control" name="terpeneName" id="choices-category-edit">
-                        <option value="English" selected >Camphane</option>
-                        <option value="French" >Camphane</option>
-                        <option value="French" >Camphane</option>
-                        <option value="French" >Camphane</option>
-                        </select> -->
+                       
                     </div>
               </div>
 
@@ -82,7 +72,7 @@
                 <div class="col-md-10">
                     <div class="input-group input-group-outline">
                         <div class="col-md-12">
-                            <select name="effect" multiple="" class="form-control pb-4" id="exampleFormControlSelect2">
+                            <select name="effect" class="form-control"  class="form-control pb-4" >
                                 @foreach ($assesments as $assesment)
                                 <option value="{{ $assesment->title }}">{{ $assesment->title }}</option>
                                 @endforeach
