@@ -36,10 +36,15 @@ class AssessmentController extends Controller
         $strains = [];
         foreach($assessments as $key => $assessment){
            $strain = Strain::where('effect', 'like',$assessment)->get();
-           if(!empty($strain)){
-            array_push($strains,$strain);
+
+           if(!empty($strain) && $strain != null ){
+               {
+                array_push($strains,$strain);
+               }
+
            }
         }
+       
         return view('client.assements.strain',compact('strains'));
     }
 

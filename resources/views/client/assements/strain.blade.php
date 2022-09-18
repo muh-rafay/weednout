@@ -32,226 +32,30 @@
 <div class="row " style="justify-content: center;">
 <div class="col-10"  style="padding-inline: 2rem;">
    <div class="border border-grey border-1 border-radius-md py-1 ScrollStyle">
-      <div class="row ">
-         <div class="col-12  px-3 d-flex" style="justify-content:space-between ;">
-            <div class="col-lg-3 col-md-6 col-sm-6 mx-1  mt-sm-0  mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5" style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 mx-1  mt-sm-0  mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2 pl-4 mt-5  " style="color:#fff;padding-left:1rem;">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 mx-1  mt-sm-0  mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5" style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 mx-1  mt-sm-0  mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5" style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
       <div class="row">
-         <div class="col-12 px-3 pt-2  d-flex" style="justify-content:space-between ;">
-            <div class="col-lg-3 col-md-6 col-sm-6  mx-1 mt-sm-0 mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5" style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
+        @foreach ($strains as $key => $strain1)
+        @foreach ($strain1 as $key => $strain)
+        @if(!empty($strain))
+            <div class="col-lg-3 col-md-6 col-sm-6   mt-sm-0 mt-4">
+                <div class="card  mb-2 ">
+                    <div class="form-check  mt-2">
+                        <input class="form-check-input chk" value="{{ $strain->id}}" type="checkbox"
+                            name="chk[]" onclick="return  myfun()">
+                        <img src="{{ asset($strain->image) }}" class="avatar "
+                            style="margin-left:1rem !important;text:center !important
+                            margin-right: auto; !important">
+                        <p class="text-sm mb-3 text-capitalize"
+                            style="font-size: 13rem;font-weight: regular;margin-left:2.9rem">
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6  mx-1 mt-sm-0 mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5 " style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 mx-1 mt-sm-0 mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5 " style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6  mx-1 mt-sm-0 mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5 " style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+        @endif
+        @endforeach
+        @endforeach
       </div>
-      <div class="row">
-         <div class="col-12 px-3 pt-2  d-flex" style="justify-content:space-between ;">
-            <div class="col-lg-3 col-md-6 col-sm-6  mx-1 mt-sm-0 mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5 " style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6  mx-1 mt-sm-0 mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5 pl-2" style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 mx-1 mt-sm-0 mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5 pl-2" style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6  mx-1 mt-sm-0 mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5 pl-2" style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="col-12 px-3 pt-2  d-flex" style="justify-content:space-between ;">
-            <div class="col-lg-3 col-md-6 col-sm-6  mx-1 mt-sm-0 mt-4">
-               <div class="card">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5 " style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6  mx-1 mt-sm-0 mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5 " style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 mx-1 mt-sm-0 mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5 " style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6  mx-1 mt-sm-0 mt-5">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5 " style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="col-12 px-3 pt-2  d-flex" style="justify-content:space-between ;">
-            <div class="col-lg-3 col-md-6 col-sm-6  mx-1 mt-sm-0 mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5 " style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6  mx-1 mt-sm-0 mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5 " style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 mx-1 mt-sm-0 mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5 " style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6  mx-1 mt-sm-0 mt-4">
-               <div class="card ">
-                  <div class="overflow-hidden position-relative border-radius-lg bg-cover  py-5"  style="background-image: url('../../assets/img/image 12.jpg');" class="img-fluid shadow border-radius-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <div class="card-body position-relative d-flex   ">
-                        <larg class="mask   bg-gradient-dark z-index-1  opacity-2  mt-5 " style="color:#fff;padding-left:1rem">lorm ipsum</larg>
-                        <p class="text-white font-weight-bolder"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+
+
    </div>
 </div>
 <div class="col-10">
