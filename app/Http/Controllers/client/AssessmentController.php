@@ -46,7 +46,7 @@ class AssessmentController extends Controller
            }
         }
 
-        return view('client.assements.strain',compact('products'));
+        return view('client.assements.strain',compact('strains'));
     }
     public function get_product(Request $request){
          $ids = $request->chk;
