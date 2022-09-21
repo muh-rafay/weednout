@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Assesment;
 use App\Models\Strain;
+use App\Models\Product;
 
 class AssessmentController extends Controller
 {
@@ -44,8 +45,28 @@ class AssessmentController extends Controller
 
            }
         }
-       
-        return view('client.assements.strain',compact('strains'));
+
+        return view('client.assements.strain',compact('products'));
+    }
+    public function get_product(Request $request){
+         $ids = $request->chk;
+        $strains =[];
+        foreach($ids as $key => $stra){
+           $strain =  Strain::where('id',$stra)->get();
+           array_push($strains,$strain);
+        }
+        $products = [];
+        foreach($strains as $key => $strain){
+           $product = Product::all();
+
+           if(!empty($product) && $product != null ){
+               {
+                array_push($products,$product);
+               }
+
+           }
+        }
+        return view('client.assements.product',compact('products'));
     }
 
     /**

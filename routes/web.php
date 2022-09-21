@@ -64,7 +64,7 @@ Route::group(['prefix' => 'client', 'middleware' => ['role:client']], function()
     Route::resource('client_assessmetents', client_assessmetents::class);
     Route::get('get_assessment/{link}',  [client_assessmetents::class,'get_assessment'])->name('get.assessment');
     Route::post('get_strain',  [client_assessmetents::class,'get_strain'])->name('get.strain');
-
+    Route::post('get_product',  [client_assessmetents::class,'get_product'])->name('get.product');
 
 });
 
