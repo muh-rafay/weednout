@@ -57,14 +57,18 @@ class AssessmentController extends Controller
         }
         $products = [];
         foreach($strains as $key => $strain){
-           $product = Product::all();
+            foreach($strain as $stra){
+                $product = Product::where('feature', 'like',$stra->typeofstrain)->orwhere('feature', 'like',$stra->effect)->get();
 
-           if(!empty($product) && $product != null ){
-               {
-                array_push($products,$product);
-               }
+                if(!empty($product) && $product != null ){
+                    {
+                     array_push($products,$product);
+                    }
 
-           }
+                }
+            }
+            dd($products);
+
         }
         return view('client.assements.product',compact('products'));
     }
