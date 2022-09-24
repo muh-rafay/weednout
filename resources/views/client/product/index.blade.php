@@ -67,19 +67,21 @@
       <div class="col-lg-12 position-relative z-index-2">
          <h3 >Product</h3>
          <div  class="row mt-5 ">
-            <div class="col-lg-12   position-relative col-sm-12 col-md-12 d-flex ">
+
+                @foreach($products as $product)
                <div class="col-lg-3  position-relative col-sm-12 px-2 col-md-12 ">
                   <div class="  mt-n4  z-index-2">
                      <a class="d-block ">
-                        <img src="{{asset('/assets/img/image 4.jpg')}}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+                        <img src="{{asset($product->image)}}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg" style="  height: 50px;
+                        display: block;width:300px !important;height:200px !important;margin-left: auto;margin-right: auto;">
                         <!-- <img src="../../assets/img/products/product-1-min.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg"> -->
                      </a>
                   </div>
                   <div class="card-footer my-2 d-flex justify-content-between">
                      <div>
-                        <h6 class="font-weight-bolder my-auto">Lorem Ipsum</h6>
-                        <p class="font-weight-normal my-auto">Lorem Ipsum</p>
-                        <p class="font-weight-normal my-auto">4432</p>
+                        <h6 class="font-weight-bolder my-auto">{{ $product->name }}</h6>
+                        <p class="font-weight-normal my-auto">${{ $product->price }}</p>
+                        <p class="font-weight-normal my-auto">{{ $product->zipcode }}</p>
                      </div>
                      <div>
                         <i class="material-icons text-danger position-relative text-lg">grade</i>
@@ -87,223 +89,11 @@
                      </div>
                   </div>
                </div>
-               <div class="col-lg-3  col-sm-12 px-2 col-md-12  ">
-                  <div class=" p-0  mt-n4  z-index-2">
-                     <a class="d-block ">
-                        <img src="{{asset('/assets/img/image 5.jpg')}}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
-                        <!-- <img src="../../assets/img/products/product-1-min.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg"> -->
-                     </a>
-                  </div>
-                  <div class="card-footer my-2 d-flex justify-content-between">
-                     <div>
-                        <h6 class="font-weight-bolder my-auto">Lorem Ipsum</h6>
-                        <p class="font-weight-normal my-auto">Lorem Ipsum</p>
-                        <p class="font-weight-normal my-auto">4432</p>
-                     </div>
-                     <div>
-                        <i class="material-icons text-lg ms-auto">star_outline</i>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-sm-3 px-2 col-md-12  ">
-                  <div class=" p-0 mt-n4  z-index-2">
-                     <a class="d-block ">
-                     <img src="{{asset('/assets/img/image 2.jpg')}}" alt="img-blur-shadow" class="img-fluid border-radius-lg ">
-                     </a>
-                  </div>
-                  <div class="card-footer my-2  d-flex justify-content-between">
-                     <div>
-                        <h6 class="font-weight-bolder my-auto">Lorem Ipsum</h6>
-                        <p class="font-weight-normal my-auto">Lorem Ipsum</p>
-                        <p class="font-weight-normal my-auto">4432</p>
-                     </div>
-                     <div>
-                        <i class="material-icons text-danger position-relative text-lg">grade</i>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-sm-3 px-2 col-md-12 ">
-                  <div class=" p-0  mt-n4  z-index-2">
-                     <a class="d-block ">
-                     <img src="{{asset('/assets/img/image 3.jpg')}}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
-                     </a>
-                  </div>
-                  <div class="card-footer my-2 d-flex justify-content-between">
-                     <div>
-                        <h6 class="font-weight-bolder my-auto">Lorem Ipsum</h6>
-                        <p class="font-weight-normal my-auto">Lorem Ipsum</p>
-                        <p class="font-weight-normal my-auto">4432</p>
-                     </div>
-                     <div>
-                        <i class="material-icons text-lg ms-auto">star_outline</i>
-                     </div>
-                  </div>
-               </div>
-            </div>
+               @endforeach
+
          </div>
       </div>
    </div>
 </div>
-</div>
-</div>
-</div>
-<div class="container-fluid py-4">
-   <div class="row">
-      <div class="col-lg-12 position-relative z-index-2">
-         <h3 >Product Near By</h3>
-         <div  class="row mt-5 ">
-            <div class="col-lg-12 col-md-12 d-flex ">
-               <div class="col-lg-3  position-relative col-sm-3 px-2 col-md-12  ">
-                  <div class="  mt-n4  z-index-2">
-                     <a class="d-block ">
-                     <img src="{{asset('/assets/img/image 6.jpg')}}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
-                     </a>
-                  </div>
-                  <div class="card-footer my-2 d-flex justify-content-between">
-                     <div>
-                        <h6 class="font-weight-bolder my-auto">Lorem Ipsum</h6>
-                        <p class="font-weight-normal my-auto">Lorem Ipsum</p>
-                        <p class="font-weight-normal my-auto">4432</p>
-                     </div>
-                     <div>
-                        <i class="material-icons text-danger position-relative text-lg">grade</i>
-                        <!-- <i class="material-icons position-relative text-lg me-1 my-auto">place</i> -->
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-3  col-sm-3 px-2 col-md-12  ">
-                  <div class=" p-0  mt-n4  z-index-2">
-                     <a class="d-block ">
-                     <img src="{{asset('/assets/img/image 4.jpg')}}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
-                     </a>
-                  </div>
-                  <div class="card-footer my-2 d-flex justify-content-between">
-                     <div>
-                        <h6 class="font-weight-bolder my-auto">Lorem Ipsum</h6>
-                        <p class="font-weight-normal my-auto">Lorem Ipsum</p>
-                        <p class="font-weight-normal my-auto">4432</p>
-                     </div>
-                     <div>
-                        <i class="material-icons text-lg ms-auto">star_outline</i>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-sm-3 px-2 col-md-12  ">
-                  <div class=" p-0 mt-n4  z-index-2">
-                     <a class="d-block ">
-                     <img src="../../assets/img/image 3.jpg" alt="img-blur-shadow" class="img-fluid border-radius-lg w-250 ">
-                     </a>
-                  </div>
-                  <div class="card-footer my-2 d-flex justify-content-between">
-                     <div>
-                        <h6 class="font-weight-bolder my-auto">Lorem Ipsum</h6>
-                        <p class="font-weight-normal my-auto">Lorem Ipsum</p>
-                        <p class="font-weight-normal my-auto">4432</p>
-                     </div>
-                     <div>
-                        <i class="material-icons text-danger position-relative text-lg">grade</i>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-sm-3 px-2 col-md-12 ">
-                  <div class=" p-0  mt-n4  z-index-2">
-                     <a class="d-block ">
-                     <img src="{{asset('/assets/img/image 3.jpg')}}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
-                     </a>
-                  </div>
-                  <div class="card-footer my-2 d-flex justify-content-between">
-                     <div>
-                        <h6 class="font-weight-bolder my-auto">Lorem Ipsum</h6>
-                        <p class="font-weight-normal my-auto">Lorem Ipsum</p>
-                        <p class="font-weight-normal my-auto">4432</p>
-                     </div>
-                     <div>
-                        <i class="material-icons text-lg ms-auto">star_outline</i>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div  class="row mt-5 ">
-      <div class="col-lg-12 col-md-12 d-flex ">
-         <div class="col-lg-3  position-relative col-sm-3 px-2 col-md-12  ">
-            <div class="  mt-n4  z-index-2">
-               <a class="d-block ">
-               <img src="{{asset('/assets/img/image 5.jpg')}}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
-               </a>
-            </div>
-            <div class="card-footer my-2 d-flex justify-content-between">
-               <div>
-                  <h6 class="font-weight-bolder my-auto">Lorem Ipsum</h6>
-                  <p class="font-weight-normal my-auto">Lorem Ipsum</p>
-                  <p class="font-weight-normal my-auto">4432</p>
-               </div>
-               <div>
-                  <i class="material-icons text-danger position-relative text-lg">grade</i>
-                  <!-- <i class="material-icons position-relative text-lg me-1 my-auto">place</i> -->
-               </div>
-            </div>
-         </div>
-         <div class="col-lg-3  col-sm-3 px-2 col-md-12  ">
-            <div class=" p-0  mt-n4  z-index-2">
-               <a class="d-block ">
-                  <img src="{{asset('/assets/img/image 6.jpg')}}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
-                  <!-- <img src="../../assets/img/products/product-1-min.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg"> -->
-               </a>
-            </div>
-            <div class="card-footer my-2 d-flex justify-content-between">
-               <div>
-                  <h6 class="font-weight-bolder my-auto">Lorem Ipsum</h6>
-                  <p class="font-weight-normal my-auto">Lorem Ipsum</p>
-                  <p class="font-weight-normal my-auto">4432</p>
-               </div>
-               <div>
-                  <i class="material-icons text-lg ms-auto">star_outline</i>
-               </div>
-            </div>
-         </div>
-         <div class="col-lg-3 col-sm-3 px-2 col-md-12  ">
-            <div class=" p-0 mt-n4  z-index-2">
-               <a class="d-block ">
-               <img src="{{asset('/assets/img/image 2.jpg')}}" alt="img-blur-shadow" class="img-fluid border-radius-lg w-250 ">
-               </a>
-            </div>
-            <div class="card-footer my-2 d-flex justify-content-between">
-               <div>
-                  <h6 class="font-weight-bolder my-auto">Lorem Ipsum</h6>
-                  <p class="font-weight-normal my-auto">Lorem Ipsum</p>
-                  <p class="font-weight-normal my-auto">4432</p>
-               </div>
-               <div>
-                  <i class="material-icons text-danger position-relative text-lg">grade</i>
-               </div>
-            </div>
-         </div>
-         <div class="col-lg-3 col-sm-3 px-2 col-md-12 ">
-            <div class=" p-0  mt-n4  z-index-2">
-               <a class="d-block ">
-               <img src="{{asset('/assets/img/image 4.jpg')}}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
-               </a>
-            </div>
-            <div class="card-footer my-2 d-flex justify-content-between">
-               <div>
-                  <h6 class="font-weight-bolder my-auto">Lorem Ipsum</h6>
-                  <p class="font-weight-normal my-auto">Lorem Ipsum</p>
-                  <p class="font-weight-normal my-auto">4432</p>
-               </div>
-               <div>
-                  <i class="material-icons text-lg ms-auto">star_outline</i>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
 @endsection

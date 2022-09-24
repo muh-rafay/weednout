@@ -23,7 +23,8 @@
                     <div class="col-lg-3  position-relative col-sm-12 px-2 col-md-12 ">
                         <div class="  mt-n4  z-index-2">
                             <a class="d-block ">
-                                <img src="{{asset($product->image)}}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+                                <img src="{{asset($product->image)}}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg" style="  height: 50px;
+                                display: block;width:300px !important;height:200px !important;margin-left: auto;margin-right: auto;">
                                 <!-- <img src="../../assets/img/products/product-1-min.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg"> -->
                             </a>
                         </div>

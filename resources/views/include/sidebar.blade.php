@@ -11,7 +11,7 @@
       <ul class="navbar-nav">
         <li class="nav-item mb-2 mt-0">
           <a data-bs-toggle="collapse" href="#ProfileNav" class="nav-link text-white" aria-controls="ProfileNav" role="button" aria-expanded="false"  style="color: #087807;">
-            <img src="{{asset('/assets/img/ivana-square.jpg')}}" class="avatar">
+            <img src="{{asset(auth()->user()->image)}}" class="avatar">
             <span class="nav-link-text ms-2 ps-1"  style="color: #087807;font-weight: bold;">{{ Auth::user()->name }}</span>
           </a>
           <div class="collapse" id="ProfileNav" >

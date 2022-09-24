@@ -58,7 +58,8 @@ class AssessmentController extends Controller
         $products = [];
         foreach($strains as $key => $strain){
             foreach($strain as $stra){
-                $product = Product::where('feature', 'like',$stra->typeofstrain)->orwhere('feature', 'like',$stra->effect)->get();
+
+                $product = Product::where('feature', 'like','%' .$stra->typeofstrain. '%' )->orwhere('feature', 'like','%' .$stra->effect.'%' )->get();
 
                 if(!empty($product) && $product != null ){
                     {
@@ -67,7 +68,7 @@ class AssessmentController extends Controller
 
                 }
             }
-            dd($products);
+
 
         }
         return view('client.assements.product',compact('products'));

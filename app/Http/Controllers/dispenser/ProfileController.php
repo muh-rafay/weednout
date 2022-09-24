@@ -60,7 +60,8 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('dispenser.profile.edit',compact('user'));
     }
 
     /**
@@ -72,7 +73,22 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+        $image = $user->image;
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+           $image=  $image->move($destinationPath, $profileImage);
+
+        }
+        User::where('id',$id)->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'image' => $image
+        ]);
+        return redirect()->route('dispenser_profiles.index')->with('success' ,"Profile Updated Successfully");
+
     }
 
     /**

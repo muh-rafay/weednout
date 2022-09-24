@@ -16,7 +16,7 @@
             <a href="" class="nav-link text-body p-0 position-relative" target="_blank">
               </a></li><li class="nav-item dropdown pe-2"><a href="" class="nav-link text-body p-0 position-relative" target="_blank">
                 </a><a href="javascript:;" class="nav-link text-body p-0 position-relative" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="{{asset('/assets/img/ivana-square.jpg')}}" class="avatar">
+                  <img src="{{asset(auth()->user()->image)}}" class="avatar">
 
                </a>
                <ul class="dropdown-menu dropdown-menu-end p-2 me-sm-n4" aria-labelledby="dropdownMenuButton">

@@ -82,7 +82,7 @@
                 <div class="col-lg-12 d-flex">
                 <div class="col-sm-4  my-auto ">
                 <div class="avatar avatar-xl position-relative ">
-                    <img src="{{asset('/assets/img/ivana-square.jpg')}}" alt="bruce" class="  shadow-sm" style="border-radius: 10px;width: 10rem; margin-right: 2rem;justify-content: center;">
+                    <img src="{{asset($user->image)}}" alt="bruce" class="  shadow-sm" style="border-radius: 10px;width: 10rem; margin-right: 2rem;justify-content: center;">
                 </div>
                 </div>
                 <div class="col-sm-4 ">
